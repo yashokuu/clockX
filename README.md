@@ -39,7 +39,7 @@ Splash is required to display web-based wallpapers on macOS. Here’s how to get
 
 1. **Add this website to Plash**  
  ![image](https://raw.githubusercontent.com/siyam-yas/clockX/refs/heads/main/src/Screenshot%202024-11-01%20at%2010.25.28%20AM.png)
-2. ** Website Link :
+2. **Website Link** :
    ```bash
    https://yasesh.likesyou.org/clock
-### You can use this is in other wallapaper client, It's also works with others OSes
+### You can use this with other wallpaper clients, and it also works with other operating systems.
