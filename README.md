@@ -15,7 +15,7 @@ A sleek, minimalistic web wallpaper that displays a live clock, designed to enha
 ## ⚙️ Features
 
 - **Live Clock** — Displays current time in a clean, minimal design.
-- **Seamless Integration** — Works smoothly with Splash for macOS.
+- **Seamless Integration** — Works smoothly with Plash for macOS.
 - **Customizable Positioning** — Adjust the wallpaper's look using Splash settings.
 - **Gradient Animation** - Added Beautiful Gradient Animations
 
