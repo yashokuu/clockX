@@ -8,7 +8,7 @@ A sleek, minimalistic web wallpaper that displays a live clock, designed to enha
 
 ## 📸 Preview
 
-![Wallpaper Preview]([path/to/preview-image.jpg](https://raw.githubusercontent.com/siyam-yas/clockX/refs/heads/main/src/Screenshot%202024-11-01%20at%2010.11.31%20AM.png))
+![Wallpaper Preview](https://raw.githubusercontent.com/siyam-yas/clockX/refs/heads/main/src/Screenshot%202024-11-01%20at%2010.11.31%20AM.png)
 
 ---
 
