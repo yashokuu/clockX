@@ -39,6 +39,6 @@ Splash is required to display web-based wallpapers on macOS. Here’s how to get
 1. **Add this website to Plash**  
    *Add Website :*
    --
-   ![image_add](![image](https://github.com/user-attachments/assets/8f118692-a7b0-4852-9167-164f7cd41b50))
+ (![image](https://raw.githubusercontent.com/siyam-yas/clockX/refs/heads/main/src/Screenshot%202024-11-01%20at%2010.25.28%20AM.png))
    ```bash
    https://yasesh.likesyou.org/clock
