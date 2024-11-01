@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/8f118692-a7b0-4852-9167-164f7cd41b50)# ⏰ (ClockX) Web Wallpaper with Live Clock for Plash on macOS
+# ⏰ (ClockX) Web Wallpaper with Live Clock for Plash on macOS
 
 ![Made for Plash](https://img.shields.io/badge/made%20for-Splash-blue.svg) ![macOS Compatible](https://img.shields.io/badge/compatible-macOS-brightgreen.svg)
 
@@ -38,6 +38,7 @@ Splash is required to display web-based wallpapers on macOS. Here’s how to get
 
 1. **Add this website to Plash**  
    *Add Website :*
-   ! [image_add]()
+   --
+   ![image_add](![image](https://github.com/user-attachments/assets/8f118692-a7b0-4852-9167-164f7cd41b50))
    ```bash
    https://yasesh.likesyou.org/clock
