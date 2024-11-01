@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif; /* Font set to Montserrat */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(
+                270deg,
+                #7d4c92, #9a66b1, #b07cdb, #f15c7f, #528891,
+                #8263df, #058891, #3bc0c8, #00bfae, #008080,
+                #005f5f, #935a04, #272c6d, #661595, #0640aa,
+                #ff7043, #ff5722
+            );
+            background-size: 800% 800%;
+            animation: gradientAnimation 20s ease infinite;
+            color: #2a2a2a; /* Darker text color for better contrast */
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .clock-container {
+            text-align: center;
+            z-index: 1;
+        }
+
+        #clock {
+            font-size: 200px; /* Increased font size */
+            font-weight: 700; /* Bold font weight for visibility */
+            background: linear-gradient(45deg, #ffffff, #e4e4e4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.15), 0 0 30px rgba(255, 255, 255, 0.1);
+            letter-spacing: -4px;
+            position: relative;
+            transition: transform 0.4s ease;
+            animation: float 3s ease-in-out infinite; /* Floating animation */
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .separator {
+            font-weight: 300;
+            color: #2a2a2a; /* Ensure the separator matches the clock text color */
+            position: relative;
+            font-size: 200px; /* Ensure separator matches clock size */
+            animation: blink 1s steps(1) infinite; /* Blink animation for separator */
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock-container">
+        <div id="clock" data-text="12:00:00">
+            12<span class="separator">:</span>00<span class="separator">:</span>00
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            // Convert to 12-hour format
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            const minutesString = minutes < 10 ? '0' + minutes : minutes;
+            const secondsString = seconds < 10 ? '0' + seconds : seconds;
+
+            const timeString = `${hours}<span class="separator">:</span>${minutesString}<span class="separator">:</span>${secondsString}`;
+            document.getElementById('clock').innerHTML = timeString;
+            document.getElementById('clock').setAttribute('data-text', `${hours}:${minutesString}:${secondsString}`);
+        }
+
+        // Update clock immediately and then every second
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>
