@@ -1,4 +1,4 @@
-# ⏰ Web Wallpaper with Live Clock for Splash on macOS
+# ⏰ (ClockX) Web Wallpaper with Live Clock for Splash on macOS
 
 ![Made for Splash](https://img.shields.io/badge/made%20for-Splash-blue.svg) ![macOS Compatible](https://img.shields.io/badge/compatible-macOS-brightgreen.svg)
 
