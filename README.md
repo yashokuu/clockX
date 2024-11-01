@@ -1,6 +1,6 @@
-# ⏰ (ClockX) Web Wallpaper with Live Clock for Splash on macOS
+![image](https://github.com/user-attachments/assets/8f118692-a7b0-4852-9167-164f7cd41b50)# ⏰ (ClockX) Web Wallpaper with Live Clock for Plash on macOS
 
-![Made for Splash](https://img.shields.io/badge/made%20for-Splash-blue.svg) ![macOS Compatible](https://img.shields.io/badge/compatible-macOS-brightgreen.svg)
+![Made for Plash](https://img.shields.io/badge/made%20for-Splash-blue.svg) ![macOS Compatible](https://img.shields.io/badge/compatible-macOS-brightgreen.svg)
 
 A sleek, minimalistic web wallpaper that displays a live clock, designed to enhance your macOS desktop with a touch of functionality and style. Perfectly optimized for use with **Splash** on macOS.
 
@@ -29,14 +29,15 @@ Follow these simple steps to set up Splash and install the wallpaper.
 Splash is required to display web-based wallpapers on macOS. Here’s how to get it:
 
 1. **Download Splash**  
-   Visit the [official Splash website](https://splash.example.com) and download the latest version compatible with macOS.
+   Visit the [official Plash Github](https://github.com/sindresorhus/Plash) and download the latest version compatible with macOS.
    
 2. **Install Splash**  
    Open the downloaded file and follow the installation prompts.
 
 ### Step 2: Download the Clock Wallpaper
 
-1. **Clone or Download the Wallpaper File**  
-   Clone this repository or download the file directly:
+1. **Add this website to Plash**  
+   *Add Website :*
+   ! [image_add]()
    ```bash
-   git clone https://github.com/yourusername/clock-wallpaper.git
+   https://yasesh.likesyou.org/clock
