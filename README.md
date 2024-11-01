@@ -37,8 +37,7 @@ Splash is required to display web-based wallpapers on macOS. Here’s how to get
 ### Step 2: Download the Clock Wallpaper
 
 1. **Add this website to Plash**  
-   *Add Website :*
-   --
- (![image](https://raw.githubusercontent.com/siyam-yas/clockX/refs/heads/main/src/Screenshot%202024-11-01%20at%2010.25.28%20AM.png))
+   Add Website :
+ ![image](https://raw.githubusercontent.com/siyam-yas/clockX/refs/heads/main/src/Screenshot%202024-11-01%20at%2010.25.28%20AM.png)
    ```bash
    https://yasesh.likesyou.org/clock
