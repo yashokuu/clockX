@@ -1,7 +1,7 @@
 <a id="styles"></a>  
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=ClockX" width="450"/>
 ---
-A sleek, minimalistic web wallpaper that displays a live clock, designed to enhance your macOS desktop with a touch of functionality and style. Perfectly optimized for use with *Plash* on macOS.
+A sleek, minimalistic web wallpaper that displays a live clock, designed to enhance your desktop with a touch of functionality and style. Perfectly optimized for use with *Plash* on macOS, but compatible with other platforms as well.
 
 <a id="styles"></a>  
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Variants" width="450"/>
