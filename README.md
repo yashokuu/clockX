@@ -1,45 +1,39 @@
-# ⏰ (ClockX) Web Wallpaper with Live Clock for Plash on macOS
+<a id="styles"></a>  
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=ClockX" width="450"/>
+---
+A sleek, minimalistic web wallpaper that displays a live clock, designed to enhance your macOS desktop with a touch of functionality and style. Perfectly optimized for use with *Plash* on macOS.
 
-![Made for Plash](https://img.shields.io/badge/made%20for-Plash-blue.svg) ![Cross-Platform](https://img.shields.io/badge/platform-macOS%2C%20Windows%2C%20Linux-brightgreen.svg)
-
-A sleek, minimalistic web wallpaper that displays a live clock, designed to enhance your macOS desktop with a touch of functionality and style. Perfectly optimized for use with **Plash** on macOS.
-
+<a id="styles"></a>  
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Variants" width="450"/>
 ---
 
-## 📸 Preview
+<div align="center"><table><tr><td>V1</td><td>Muffen</td></tr><tr><td>
+<img src="src/v1.png"/></td><td>
+<img src="src/muffen.png"/></td></tr></table></div>
 
-![Wallpaper Preview](https://raw.githubusercontent.com/siyam-yas/clockX/refs/heads/main/src/Screenshot%202024-11-01%20at%2010.11.31%20AM.png)
-
+<a id="styles"></a>  
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Features" width="450"/>
 ---
-
-## ⚙️ Features
 
 - **Live Clock** — Displays current time in a clean, minimal design.
 - **Seamless Integration** — Works smoothly with Plash for macOS.
 - **Customizable Positioning** — Adjust the wallpaper's look using Splash settings.
 - **Gradient Animation** - Added Beautiful Gradient Animations
 
+<a id="styles"></a>  
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Previews" width="450"/>
 ---
 
-## 📥 Installation Guide
+- v1 : [ClockX v1](https://yashokuu.github.io/clockX/v1/)
+- Heart : [ClockX Muffen](https://yashokuu.github.io/clockX/muffen/)
 
-Follow these simple steps to set up Plash and install the wallpaper.
+<a id="styles"></a>  
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Contributing" width="450"/>
+---
+Contributions are welcome! Please fork the repository and submit a pull request.
 
-### Step 1: Download and Install Plash
+<a id="styles"></a>  
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=License" width="450"/>
+---
 
-Splash is required to display web-based wallpapers on macOS. Here’s how to get it:
-
-1. **Download Plash**  
-   Visit the [official Plash Github](https://github.com/sindresorhus/Plash) and download the latest version compatible with macOS.
-   
-2. **Install Plash**  
-   Open the downloaded file and follow the installation prompts.
-
-### Step 2: Install to Plash
-
-1. **Add this website to Plash**  
- ![image](https://raw.githubusercontent.com/siyam-yas/clockX/refs/heads/main/src/Screenshot%202024-11-01%20at%2010.25.28%20AM.png)
-2. **Website Link** :
-   ```bash
-   https://yasesh.likesyou.org/clock
-### You can use this with other wallpaper clients, and it also works with other operating systems.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Comfortaa:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(270deg,
+                    #ffd6e0, #ffb6c1, #ffc8dd, #ffafcc, #bde0fe,
+                    #a2d2ff, #cdb4db, #c8b6ff, #bbd0ff, #ffc8dd,
+                    #d0f4de, #a9def9, #e4c1f9, #fcf6bd, #ff99c8);
+            background-size: 800% 800%;
+            animation: gradientAnimation 30s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .widget-container {
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1),
+                inset 0 0 20px rgba(255, 255, 255, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            position: relative;
+            max-width: 600px;
+            width: 90%;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .widget-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15),
+                inset 0 0 20px rgba(255, 255, 255, 0.6);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .widget-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .date-display {
+            font-family: 'Comfortaa', cursive;
+            font-size: 1.2rem;
+            color: #5a5a5a;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .clock-container {
+            text-align: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        #clock {
+            font-family: 'Comfortaa', cursive;
+            font-size: 4.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #5a5a5a, #333333);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: -2px;
+            margin: 10px 0;
+        }
+
+        .separator {
+            position: relative;
+            animation: blink 1s steps(1) infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .quote-container {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 15px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .quote-text {
+            font-size: 1rem;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .quote-author {
+            font-size: 0.9rem;
+            text-align: right;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .quote-icon {
+            position: absolute;
+            font-size: 4rem;
+            color: rgba(0, 0, 0, 0.05);
+            top: 10px;
+            left: 10px;
+            transform: rotate(180deg);
+        }
+
+        .control-btns {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .control-btn {
+            font-size: 1.2rem;
+            color: #5a5a5a;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+            background: rgba(255, 255, 255, 0.4);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .control-btn:hover {
+            transform: scale(1.1);
+            color: #333;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .emoji-clouds {
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0.7;
+            animation: floatEmoji 15s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes floatEmoji {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+
+            50% {
+                transform: translateY(-30px) translateX(30px);
+            }
+
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        #emoji1 {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        #emoji2 {
+            top: 20%;
+            right: 20%;
+            animation-delay: 2s;
+        }
+
+        #emoji3 {
+            bottom: 15%;
+            left: 25%;
+            animation-delay: 1s;
+        }
+
+        #emoji4 {
+            bottom: 30%;
+            right: 15%;
+            animation-delay: 3s;
+        }
+
+        .period-indicator {
+            font-size: 1rem;
+            color: #5a5a5a;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .widget-container {
+                padding: 25px;
+                width: 85%;
+            }
+
+            #clock {
+                font-size: 3.5rem;
+            }
+
+            .control-btns {
+                top: 15px;
+                right: 15px;
+            }
+
+            .control-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="widget-container">
+        <div class="widget-header">
+            <div class="date-display" id="date">Monday, March 3, 2025</div>
+            <div class="control-btns">
+                <div class="control-btn theme-btn" title="Change Theme">
+                    <i class="fas fa-magic"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="clock-container">
+            <div id="clock">
+                12<span class="separator">:</span>00<span class="separator">:</span>00
+            </div>
+            <div class="period-indicator" id="period">AM</div>
+        </div>
+        <div class="quote-container">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="quote-text" id="quote">Today is your opportunity to build the tomorrow you want.</div>
+            <div class="quote-author" id="author">- Ken Poirot</div>
+        </div>
+
+        <div class="emoji-clouds" id="emoji1">🌸</div>
+        <div class="emoji-clouds" id="emoji2">✨</div>
+        <div class="emoji-clouds" id="emoji3">🌈</div>
+        <div class="emoji-clouds" id="emoji4">☁️</div>
+    </div>
+
+    <script>
+        function init() {
+            updateClock();
+            setInterval(updateClock, 1000);
+            document.querySelector('.theme-btn').addEventListener('click', changeTheme);
+            changeEmojis();
+            updateQuote();
+            setInterval(updateQuote, 15000);
+        }
+
+        const emojis = ["🌸", "✨", "🌈", "☁️", "🌟", "🍭", "🦄", "🌺", "🌻", "🍦", "🎀"];
+
+        const themes = [
+            "linear-gradient(270deg, #ffd6e0, #ffb6c1, #ffc8dd, #ffafcc, #bde0fe, #a2d2ff, #cdb4db, #c8b6ff, #bbd0ff, #ffc8dd)",
+            "linear-gradient(270deg, #d0f4de, #a9def9, #e4c1f9, #fcf6bd, #ff99c8, #b8e0d2, #d6eadf, #eac4d5, #f3d1f4, #fbdada)",
+            "linear-gradient(270deg, #8ecae6, #219ebc, #023047, #ffb703, #fb8500, #97d8c4, #66c3ff, #ffe66d, #ff6b6b, #4ecdc4)",
+            "linear-gradient(270deg, #e0fbfc, #98c1d9, #3d5a80, #ee6c4d, #293241, #ffcdb2, #ffb4a2, #e5989b, #b5838d, #6d6875)",
+            "linear-gradient(270deg, #c9cba3, #ffe1a8, #e26d5c, #723d46, #472d30, #91c4f2, #a1de93, #f7a072, #f18701, #023e8a)"
+        ];
+
+        const localQuotes = [
+            { text: "Today is your opportunity to build the tomorrow you want.", author: "Ken Poirot" },
+            { text: "Every moment is a fresh beginning.", author: "T.S. Eliot" },
+            { text: "The best way to predict the future is to create it.", author: "Peter Drucker" },
+            { text: "Happiness is not by chance, but by choice.", author: "Jim Rohn" },
+            { text: "You are never too old to set another goal or to dream a new dream.", author: "C.S. Lewis" },
+            { text: "The secret of getting ahead is getting started.", author: "Mark Twain" },
+            { text: "Don't count the days, make the days count.", author: "Muhammad Ali" },
+            { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+            { text: "It does not matter how slowly you go as long as you do not stop.", author: "Confucius" },
+            { text: "Life is what happens when you're busy making other plans.", author: "John Lennon" },
+            { text: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt" },
+            { text: "Success is not final, failure is not fatal: it is the courage to continue that counts.", author: "Winston Churchill" },
+            { text: "In the middle of difficulty lies opportunity.", author: "Albert Einstein" },
+            { text: "It always seems impossible until it's done.", author: "Nelson Mandela" },
+            { text: "Act as if what you do makes a difference. It does.", author: "William James" }
+        ];
+
+        const clockElement = document.getElementById('clock');
+        const periodElement = document.getElementById('period');
+        const dateElement = document.getElementById('date');
+        const quoteElement = document.getElementById('quote');
+        const authorElement = document.getElementById('author');
+
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            const period = hours >= 12 ? "PM" : "AM";
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+            const minutesString = minutes < 10 ? '0' + minutes : minutes;
+            const secondsString = seconds < 10 ? '0' + seconds : seconds;
+            const timeString = `${hours}<span class="separator">:</span>${minutesString}<span class="separator">:</span>${secondsString}`;
+            clockElement.innerHTML = timeString;
+            periodElement.textContent = period;
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            dateElement.textContent = now.toLocaleDateString('en-US', options);
+        }
+
+        function updateQuote() {
+            const randomQuote = localQuotes[Math.floor(Math.random() * localQuotes.length)];
+            quoteElement.textContent = randomQuote.text;
+            authorElement.textContent = `- ${randomQuote.author}`;
+        }
+
+        function changeEmojis() {
+            const emojiElements = document.querySelectorAll('.emoji-clouds');
+            emojiElements.forEach(element => {
+                element.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            });
+            setInterval(() => {
+                const randomEmoji = document.getElementById(`emoji${Math.floor(Math.random() * 4) + 1}`);
+                randomEmoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            }, 3000);
+        }
+
+        function changeTheme() {
+            const randomTheme = themes[Math.floor(Math.random() * themes.length)];
+            document.body.style.background= randomTheme;
+            document.body.style.backgroundSize = "800% 800%";
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+
+</html>
