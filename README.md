@@ -11,6 +11,13 @@ A sleek, minimalistic web wallpaper that displays a live clock, designed to enha
 <img src="src/v1.png"/></td><td>
 <img src="src/muffen.png"/></td></tr></table></div>
 
+<div align="center"><table><tr><td>Livey</td></tr><tr><td>
+<img src="src/livey.png"/></td></tr></table></div>
+[!NOTE]
+> The Livey variant includes copyrighted wallpaper from [Motion Backgrounds](https://motionbgs.com/girl-blue-eyes).
+[!IMPORTANT]
+> You can customize Livey by editing `conf.json`
+
 <a id="styles"></a>  
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Features" width="450"/>
 ---
@@ -19,6 +26,10 @@ A sleek, minimalistic web wallpaper that displays a live clock, designed to enha
 - **Seamless Integration** — Works smoothly with Plash for macOS.
 - **Customizable Positioning** — Adjust the wallpaper's look using Splash settings.
 - **Gradient Animation** - Added Beautiful Gradient Animations
+
+<a id="styles"></a>  
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Livey" width="450"/>
+---
 
 <a id="styles"></a>  
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Previews" width="450"/>

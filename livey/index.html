@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livey</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            color: white;
+            background-color: #000;
+        }
+
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            width: 100vw;
+            /* Ensure the video takes up the full viewport width */
+            height: 100vh;
+            /* Ensure the video takes up the full viewport height */
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.25);
+            z-index: -1;
+        }
+
+        #clock-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 25px 35px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            backdrop-filter: blur(4px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        #time {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #date {
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .clock-icon {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <video id="video-background" autoplay muted loop></video>
+    <div id="overlay"></div>
+    <div id="clock-container">
+        <div class="clock-icon"><i class="far fa-clock"></i></div>
+        <div id="time">00:00:00</div>
+        <div id="date">Loading...</div>
+    </div>
+
+    <script>
+        // Default configuration
+        const config = {
+            videoUrl: "https://cdnjs.cloudflare.com/ajax/libs/Vidage/1.0.1/videos/bg.mp4",
+            clockPosition: "top-left",
+            clockFormat: "24",
+            showSeconds: true
+        };
+
+        // DOM elements
+        const videoBackground = document.getElementById('video-background');
+        const clockContainer = document.getElementById('clock-container');
+        const timeElement = document.getElementById('time');
+        const dateElement = document.getElementById('date');
+
+        // Try to load config from conf.json
+        loadConfig();
+
+        // Apply initial configuration
+        applyConfig();
+
+        // Update clock
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        // Functions
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+            // Format based on 12/24 hour selection
+            if (config.clockFormat === "12") {
+                const period = hours >= 12 ? 'PM' : 'AM';
+                hours = hours % 12;
+                hours = hours ? hours : 12; // Convert 0 to 12
+                timeElement.textContent = `${hours}:${minutes}${config.showSeconds ? ':' + seconds : ''} ${period}`;
+            } else {
+                timeElement.textContent = `${hours.toString().padStart(2, '0')}:${minutes}${config.showSeconds ? ':' + seconds : ''}`;
+            }
+
+            dateElement.textContent = now.toLocaleDateString(undefined, options);
+        }
+
+        function loadConfig() {
+            try {
+                // Try to load from conf.json file
+                fetch('conf.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        Object.assign(config, data);
+                        applyConfig();
+                    })
+                    .catch(error => {
+                        console.log('No config file found, using defaults');
+                    });
+            } catch (error) {
+                console.error('Error loading config:', error);
+            }
+        }
+
+        function applyConfig() {
+            // Set video source
+            videoBackground.src = config.videoUrl;
+            videoBackground.load();
+
+            // Position clock
+            setClockPosition(config.clockPosition);
+        }
+
+        function setClockPosition(position) {
+            // Reset all positioning
+            clockContainer.style.top = 'auto';
+            clockContainer.style.bottom = 'auto';
+            clockContainer.style.left = 'auto';
+            clockContainer.style.right = 'auto';
+            clockContainer.style.transform = 'none';
+
+            // Apply new position
+            switch (position) {
+                case 'top-left':
+                    clockContainer.style.top = '20px';
+                    clockContainer.style.left = '20px';
+                    break;
+                case 'top-right':
+                    clockContainer.style.top = '20px';
+                    clockContainer.style.right = '20px';
+                    break;
+                case 'bottom-left':
+                    clockContainer.style.bottom = '20px';
+                    clockContainer.style.left = '20px';
+                    break;
+                case 'bottom-right':
+                    clockContainer.style.bottom = '20px';
+                    clockContainer.style.right = '20px';
+                    break;
+                case 'center':
+                    clockContainer.style.top = '50%';
+                    clockContainer.style.left = '50%';
+                    clockContainer.style.transform = 'translate(-50%, -50%)';
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
