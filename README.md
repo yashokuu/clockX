@@ -13,9 +13,11 @@ A sleek, minimalistic web wallpaper that displays a live clock, designed to enha
 
 <div align="center"><table><tr><td>Livey</td></tr><tr><td>
 <img src="src/livey.png"/></td></tr></table></div>
-[!NOTE]
+
+> [!NOTE]
 > The Livey variant includes copyrighted wallpaper from [Motion Backgrounds](https://motionbgs.com/girl-blue-eyes).
-[!IMPORTANT]
+
+> [!IMPORTANT]
 > You can customize Livey by editing `conf.json`
 
 <a id="styles"></a>  
