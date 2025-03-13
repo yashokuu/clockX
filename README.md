@@ -29,9 +29,19 @@ A sleek, minimalistic web wallpaper that displays a live clock, designed to enha
 - **Customizable Positioning** — Adjust the wallpaper's look using Splash settings.
 - **Gradient Animation** - Added Beautiful Gradient Animations
 
+
 <a id="styles"></a>  
-<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Livey" width="450"/>
+<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Wallpaper+Clients" width="450"/>
 ---
+
+- **Plash (macOS)** — [Plash](https://sindresorhus.com/plash)
+- **Rainmeter (Windows)** — [Rainmeter](https://www.rainmeter.net/)
+- **Wallpaper Engine (Windows)** — [Wallpaper Engine](https://www.wallpaperengine.io/)
+- **Komorebi (Linux)** — [Komorebi](https://github.com/cheesecakeufo/komorebi)
+- **ScreenPlay (Cross-platform)** — [ScreenPlay](https://screenplay.dev/)
+- **WinDynamicDesktop (Windows)** — [WinDynamicDesktop](https://github.com/t1m0thyj/WinDynamicDesktop)
+- **Wallpapers (GNOME)** — [GNOME Wallpapers](https://extensions.gnome.org/extension/1048/wallpaper/)
+
 
 <a id="styles"></a>  
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Previews" width="450"/>
