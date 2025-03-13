@@ -39,6 +39,7 @@ A sleek, minimalistic web wallpaper that displays a live clock, designed to enha
 
 - v1 : [ClockX v1](https://yashokuu.github.io/clockX/v1/)
 - Heart : [ClockX Muffen](https://yashokuu.github.io/clockX/muffen/)
+- Livey : [ClockX Livey](https://yashokuu.github.io/clockX/livey/)
 
 <a id="styles"></a>  
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Contributing" width="450"/>
