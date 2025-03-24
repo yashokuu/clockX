@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ClockX - Analog</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@500;700&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .gradient-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #483D8B, #4682B4, #008B8B, #2F4F4F);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      z-index: -1;
+    }
+    
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
+    /* Background elements for glass effect */
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.6;
+      z-index: -1;
+    }
+    
+    .shape-1 {
+      width: 300px;
+      height: 300px;
+      top: 20%;
+      left: 20%;
+      background: rgba(60, 120, 200, 0.5);
+      animation: float 8s ease-in-out infinite;
+    }
+    
+    .shape-2 {
+      width: 250px;
+      height: 250px;
+      bottom: 20%;
+      right: 20%;
+      background: rgba(70, 180, 170, 0.5);
+      animation: float 7s ease-in-out infinite reverse;
+    }
+    
+    @keyframes float {
+      0% { transform: translate(0px, 0px); }
+      50% { transform: translate(-20px, 20px); }
+      100% { transform: translate(0px, 0px); }
+    }
+    
+    .clock-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      padding: 30px;
+      border-radius: 15px;
+      width: 280px;
+      height: 280px;
+      
+      /* Glassmorphism effect */
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    .clock {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: rgba(30, 30, 40, 0.5);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+    }
+    
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .hand {
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform-origin: 50% 100%;
+      border-radius: 5px;
+    }
+    
+    .hour-hand {
+      width: 5px;
+      height: 25%;
+      margin-left: -2.5px;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .minute-hand {
+      width: 3px;
+      height: 35%;
+      margin-left: -1.5px;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .second-hand {
+      width: 1.5px;
+      height: 40%;
+      margin-left: -0.75px;
+      background-color: rgba(100, 180, 255, 0.9);
+    }
+    
+    .center-dot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      margin-left: -4px;
+      margin-top: -4px;
+      background-color: rgba(100, 180, 255, 0.9);
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    
+    .hour-marks {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .hour-mark {
+      position: absolute;
+      width: 3px;
+      height: 8px;
+      background-color: rgba(255, 255, 255, 0.5);
+      left: 50%;
+      margin-left: -1.5px;
+      transform-origin: 50% 70px;
+      border-radius: 1px;
+    }
+    
+    .hour-numbers {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-weight: 500;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.7);
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .hour-number {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+    }
+    
+    .digital-time {
+      font-family: 'Rubik', sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      margin-top: 5px;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .date-info {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .day-name {
+      font-weight: 600;
+      font-size: 16px;
+      color: rgba(100, 180, 255, 0.9);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+    
+    .full-date {
+      font-weight: 300;
+    }
+    
+    .icon {
+      font-size: 14px;
+      color: rgba(100, 180, 255, 0.9);
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="gradient-background"></div>
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+  
+  <div class="clock-container">
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hour-marks" id="hour-marks"></div>
+        <div class="hour-numbers" id="hour-numbers"></div>
+        <div class="hand hour-hand" id="hour-hand"></div>
+        <div class="hand minute-hand" id="minute-hand"></div>
+        <div class="hand second-hand" id="second-hand"></div>
+        <div class="center-dot"></div>
+      </div>
+    </div>
+    
+    <div class="digital-time" id="digital-time">00:00:00</div>
+    
+    <div class="date-info">
+      <div class="day-name" id="day-name"><i class="fas fa-calendar-day icon"></i>Monday</div>
+      <div class="full-date" id="full-date">March 24, 2025</div>
+    </div>
+  </div>
+
+  <script>
+    // Create hour marks
+    const hourMarksContainer = document.getElementById('hour-marks');
+    for (let i = 0; i < 12; i++) {
+      const hourMark = document.createElement('div');
+      hourMark.className = 'hour-mark';
+      hourMark.style.transform = `rotate(${i * 30}deg)`;
+      hourMarksContainer.appendChild(hourMark);
+    }
+    
+    // Create hour numbers
+    const hourNumbersContainer = document.getElementById('hour-numbers');
+    for (let i = 1; i <= 12; i++) {
+      const hourNumber = document.createElement('div');
+      hourNumber.className = 'hour-number';
+      hourNumber.textContent = i;
+      
+      // Position the hour numbers
+      const angle = (i * 30 - 90) * (Math.PI / 180);
+      const radius = 55;
+      const x = radius * Math.cos(angle);
+      const y = radius * Math.sin(angle);
+      
+      hourNumber.style.left = `${x + 70 - 10}px`;
+      hourNumber.style.top = `${y + 70 - 10}px`;
+      
+      hourNumbersContainer.appendChild(hourNumber);
+    }
+    
+    // Update clock
+    function updateClock() {
+      const now = new Date();
+      const seconds = now.getSeconds();
+      const minutes = now.getMinutes();
+      const hours = now.getHours() % 12;
+      
+      // Calculate rotation angles
+      const secondAngle = (seconds * 6);
+      const minuteAngle = (minutes * 6) + (seconds * 0.1);
+      const hourAngle = (hours * 30) + (minutes * 0.5);
+      
+      // Apply rotations
+      document.getElementById('second-hand').style.transform = `rotate(${secondAngle}deg)`;
+      document.getElementById('minute-hand').style.transform = `rotate(${minuteAngle}deg)`;
+      document.getElementById('hour-hand').style.transform = `rotate(${hourAngle}deg)`;
+      
+      // Update digital clock
+      const timeDisplay = `${String(now.getHours()).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      document.getElementById('digital-time').textContent = timeDisplay;
+      
+      // Update date information
+      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      
+      document.getElementById('day-name').innerHTML = `<i class="fas fa-calendar-day icon"></i>${days[now.getDay()]}`;
+      document.getElementById('full-date').textContent = `${months[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
+    }
+    
+    // Update every second
+    setInterval(updateClock, 1000);
+    updateClock(); 
+  </script>
+</body>
+</html>

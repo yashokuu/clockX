@@ -11,8 +11,9 @@ A sleek, minimalistic web wallpaper that displays a live clock, designed to enha
 <img src="src/v1.png"/></td><td>
 <img src="src/muffen.png"/></td></tr></table></div>
 
-<div align="center"><table><tr><td>Livey</td></tr><tr><td>
-<img src="src/livey.png"/></td></tr></table></div>
+<div align="center"><table><tr><td>Livey</td><td>Analog</td></tr><tr><td>
+<img src="src/livey.png"/></td><td>
+<img src="src/analog.png"/></td></tr></table></div>
 
 > [!NOTE]
 > The Livey variant includes copyrighted wallpaper from [Motion Backgrounds](https://motionbgs.com/girl-blue-eyes).
@@ -50,6 +51,8 @@ A sleek, minimalistic web wallpaper that displays a live clock, designed to enha
 - v1 : [ClockX v1](https://yashokuu.github.io/clockX/v1/)
 - Heart : [ClockX Muffen](https://yashokuu.github.io/clockX/muffen/)
 - Livey : [ClockX Livey](https://yashokuu.github.io/clockX/livey/)
+- Analog : [ClockX Analog](https://yashokuu.github.io/clockX/analog/)
+
 
 <a id="styles"></a>  
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=Contributing" width="450"/>
@@ -60,4 +63,4 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=License" width="450"/>
 ---
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
