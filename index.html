@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClockX - Sleek Minimalist Wallpaper Clock</title>
+    <style>
+        :root {
+            --primary-color: #CCA9DD;
+            --background-color: #121212;
+            --text-color: #E0E0E0;
+            --section-bg: #1E1E1E;
+            --note-bg: #1F2937;
+            --important-bg: #3B2131;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-family: 'Lexend Giga', sans-serif;
+            font-size: 24px;
+            color: var(--primary-color);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .divider {
+            border-bottom: 1px solid rgba(204, 169, 221, 0.3);
+            margin: 10px 0 20px 0;
+        }
+        
+        .content {
+            margin-bottom: 40px;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .gallery-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        
+        .gallery-item {
+            margin: 0 10px;
+            text-align: center;
+            background-color: var(--section-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 45%;
+        }
+        
+        .gallery-item h3 {
+            padding: 8px;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .features-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .features-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        
+        .features-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .clients-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .clients-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        
+        .clients-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .clients-list a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .clients-list a:hover {
+            text-decoration: underline;
+        }
+        
+        .previews-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .previews-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        
+        .previews-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .previews-list a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .previews-list a:hover {
+            text-decoration: underline;
+        }
+        
+        .note, .important {
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .note {
+            background-color: var(--note-bg);
+            border-left: 4px solid #3B82F6;
+        }
+        
+        .important {
+            background-color: var(--important-bg);
+            border-left: 4px solid #F43F5E;
+        }
+        
+        .note:before, .important:before {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+        }
+        
+        .note:before {
+            content: "ℹ️";
+        }
+        
+        .important:before {
+            content: "⚠️";
+        }
+        
+        footer {
+            border-top: 1px solid rgba(204, 169, 221, 0.3);
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="header">ClockX</div>
+        <div class="divider"></div>
+        <p>A sleek, minimalistic web wallpaper that displays a live clock, designed to enhance your desktop with a touch of functionality and style. Perfectly optimized for use with <em>Plash</em> on macOS, but compatible with other platforms as well.</p>
+    </div>
+    
+    <div class="content">
+        <div class="header">Variants</div>
+        <div class="divider"></div>
+        
+        <div class="gallery">
+            <div class="gallery-row">
+                <div class="gallery-item">
+                    <h3>V1</h3>
+                    <img src="src/v1.png" alt="ClockX V1 variant">
+                </div>
+                <div class="gallery-item">
+                    <h3>Muffen</h3>
+                    <img src="src/muffen.png" alt="ClockX Muffen variant">
+                </div>
+            </div>
+            
+            <div class="gallery-row">
+                <div class="gallery-item">
+                    <h3>Livey</h3>
+                    <img src="src/livey.png" alt="ClockX Livey variant">
+                </div>
+                <div class="gallery-item">
+                    <h3>Analog</h3>
+                    <img src="src/analog.png" alt="ClockX Analog variant">
+                </div>
+            </div>
+        </div>
+        
+        <div class="note">
+            The Livey variant includes copyrighted wallpaper from <a href="https://motionbgs.com/girl-blue-eyes">Motion Backgrounds</a>.
+        </div>
+        
+        <div class="important">
+            You can customize Livey by editing <code>conf.json</code>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="header">Features</div>
+        <div class="divider"></div>
+        
+        <ul class="features-list">
+            <li><strong>Live Clock</strong> — Displays current time in a clean, minimal design.</li>
+            <li><strong>Seamless Integration</strong> — Works smoothly with Plash for macOS.</li>
+            <li><strong>Customizable Positioning</strong> — Adjust the wallpaper's look using Splash settings.</li>
+            <li><strong>Gradient Animation</strong> - Added Beautiful Gradient Animations</li>
+        </ul>
+    </div>
+    
+    <div class="content">
+        <div class="header">Wallpaper Clients</div>
+        <div class="divider"></div>
+        
+        <ul class="clients-list">
+            <li><strong>Plash (macOS)</strong> — <a href="https://sindresorhus.com/plash">Plash</a></li>
+            <li><strong>Rainmeter (Windows)</strong> — <a href="https://www.rainmeter.net/">Rainmeter</a></li>
+            <li><strong>Wallpaper Engine (Windows)</strong> — <a href="https://www.wallpaperengine.io/">Wallpaper Engine</a></li>
+            <li><strong>Komorebi (Linux)</strong> — <a href="https://github.com/cheesecakeufo/komorebi">Komorebi</a></li>
+            <li><strong>ScreenPlay (Cross-platform)</strong> — <a href="https://screenplay.dev/">ScreenPlay</a></li>
+            <li><strong>WinDynamicDesktop (Windows)</strong> — <a href="https://github.com/t1m0thyj/WinDynamicDesktop">WinDynamicDesktop</a></li>
+            <li><strong>Wallpapers (GNOME)</strong> — <a href="https://extensions.gnome.org/extension/1048/wallpaper/">GNOME Wallpapers</a></li>
+        </ul>
+    </div>
+    
+    <div class="content">
+        <div class="header">Previews</div>
+        <div class="divider"></div>
+        
+        <ul class="previews-list">
+            <li>v1 : <a href="https://yashokuu.github.io/clockX/v1/">ClockX v1</a></li>
+            <li>Heart : <a href="https://yashokuu.github.io/clockX/muffen/">ClockX Muffen</a></li>
+            <li>Livey : <a href="https://yashokuu.github.io/clockX/livey/">ClockX Livey</a></li>
+            <li>Analog : <a href="https://yashokuu.github.io/clockX/analog/">ClockX Analog</a></li>
+        </ul>
+    </div>
+    
+    <div class="content">
+        <div class="header">Contributing</div>
+        <div class="divider"></div>
+        
+        <p>Contributions are welcome! Please fork the repository and submit a pull request.</p>
+    </div>
+    
+    <div class="content">
+        <div class="header">License</div>
+        <div class="divider"></div>
+        
+        <p>This project is licensed under the MIT License. See the <a href="LICENSE.md">LICENSE</a> file for details.</p>
+    </div>
+    
+    <footer>
+        <p>© 2025 ClockX</p>
+    </footer>
+</body>
+</html>
